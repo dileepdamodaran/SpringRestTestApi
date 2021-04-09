@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="person")
+@Table(name="person" )
 public class Person {
 
 	@Id
@@ -16,13 +16,13 @@ public class Person {
 	@Column(name = "id")
     private Long id;
 	
-	@Column(name = "firstNm")
+	@Column(name = "first_nm")
 	private String firstNm;
 	
-	@Column(name = "lastNm")
+	@Column(name = "last_nm")
 	private String lastNm;
 	
-	@Column(name = "middleNm")
+	@Column(name = "middle_nm")
 	private String middleNm;
 	
 
