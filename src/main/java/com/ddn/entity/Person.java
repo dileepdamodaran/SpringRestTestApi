@@ -11,6 +11,12 @@ import javax.persistence.Table;
 @Table(name="person" )
 public class Person {
 
+	
+	public Person(Long id , String firstNm, String lastNm){
+		this.id = id;
+		this.firstNm = firstNm;
+		this.lastNm = lastNm;
+	}
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "id")
