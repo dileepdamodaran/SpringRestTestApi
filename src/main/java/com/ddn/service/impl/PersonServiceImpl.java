@@ -3,6 +3,7 @@ package com.ddn.service.impl;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,6 +27,8 @@ public class PersonServiceImpl implements PersonService {
 		persons.add(p1);
 		persons.add(p2);
 		persons.add(p3);
+		persons = persons.stream().filter(p-> !p.getId().equals(1L)).collect(Collectors.toList());
+		
 		Collections.sort(persons, (o1,o2)->o1.getFirstNm().compareTo(o2.getFirstNm()));
 		return (List<Person>) personRepository.findAll();
 	}
